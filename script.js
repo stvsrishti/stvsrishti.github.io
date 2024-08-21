@@ -22,6 +22,7 @@ startBtn.addEventListener("click", function () {
 //event listener added to stop button
 stopBtn.addEventListener("click", function () {
   timer = false; //setting timer = false to stop the watch
+  startBtn.disabled = false;
 });
 
 //event listener added to restart button
@@ -35,11 +36,14 @@ resetBtn.addEventListener("click", function () {
   hrEle.innerHTML = "00";
   minEle.innerHTML = "00";
   secEle.innerHTML = "00";
+  startBtn.disabled = false;
 });
 
 // function that starts the timer and changes value of hr, min, seconds
 function startWatch() {
+
   if (timer) {
+    startBtn.disabled = true;
     second++;
 
     //increase minute value if seconds reachs 60
