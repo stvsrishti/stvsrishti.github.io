@@ -63,6 +63,9 @@ searchBoxEle.addEventListener("keyup", (event) => {
     //console.log(apiUrl+searchText)
     fetchMovies(searchText);
   }
+  if(searchText.length == 0){
+    searchListEle.style.display = 'none';
+  }
 });
 //function to display topPicks list
 function displayTopPicks() {
