@@ -1,57 +1,241 @@
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+.display-none{
+    display: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  background-color: cornflowerblue;
+  color: white;
+}
+.header {
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  width: 22%;
+  justify-content: space-evenly;
+}
+h1 {
+  margin: 10px;
+}
+#nav-icon {
+  cursor: pointer;
+  font-size: 22px;
+  margin-left: 30px;
+}
+#nav-div {
+  display: none;
+  width: 12em;
+  background-color: rgb(146, 183, 250);
+  border-radius: 5px;
+  margin: 10px;
+  position: absolute;
+  top: 2em;
+  left: 8em;
+}
+#nav-div h4 {
+  padding: 5px;
+  margin: 0;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    margin: auto;
-    margin-top: 50px;
-    background-color:#0e85fc;
+.search-container {
+  width: 80%;
+  margin-left: 20px;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background: white;
 }
-h1{
-    color: darkblue;
-    text-align: center;
+.search-div {
+  margin-left: 10px;
+  display: flex;
 }
-.value {
-    font-size: 130px;
-    color: #fff;
+#movie-search-box {
+  width: 100%;
+  height: 30px;
+  border: none;
+}
+.fa-magnifying-glass {
+  padding: 8px;
+  color: cornflowerblue;
+}
+#search-list {
+  position: absolute;
+  width: 78vw;
+  background: #5c66f3;
+  top: 45px;
+  left: 11em;
+  display: none;
+  color: white;
+}
+.search-list-item {
+  display: flex;
+  margin: 5px;
+  cursor: pointer;
+}
+.item-thumbnail {
+  width: 15em;
+}
+.item-thumbnail img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  border: none;
+  object-fit: fill;
+}
+.item-info {
+  margin: 10px;
+}
+.item-info button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+input:focus {
+  outline: none;
 }
 
-.txt {
-    font-size: 25px;
-    color: #fff;
+.fa-heart-circle-plus {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container{
+    margin: 10px;
+}
+.movie-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+/* movie details page css starts here */
+
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#movieDetail {
+  margin: 15px;
+  background: darkblue;
+  color: white;
+  border-radius: 15px;
+  min-height: 90vh;
+}
+#movie-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 }
 
-#buttonsDiv {
-    margin-top: 40px;
-    margin-bottom: 40px;
+.header-right h4 {
+  margin-bottom: 0;
 }
-.btn {
-    width: 100px;
-    padding: 10px;
-    margin: 0px 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    color: white;
-    font-weight: 600;
-    transition: 0.8s;
-    cursor: pointer;
+.rating-div {
+  display: flex;
+}
+.rating-div i {
+  font-size: 32px;
+  margin-right: 5px;
+  color: gold;
+}
+.rating-div p {
+  margin: 0;
+}
+.rating-div div p span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+.rating-div div span:last-child {
+  font-size: 12px;
+}
+.header-left div {
+  margin-left: 10px;
+}
+#movie-thumbnail {
+  margin: 20px;
+  width: 25%;
+}
+#movie-thumbnail img {
+  object-fit: cover;
+  border-radius: 5px;
+}
+#movie-sec-details i {
+  font-size: 3px;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.detail-sec {
+  display: flex;
+  border-top: 0.2px solid white;
+}
+#movie-info {
+  margin: 30px 10px;
+}
+#movie-info p {
+  font-size: 22px;
+}
+#movie-info table td {
+  padding-bottom: 1em;
+}
+#movie-info table tbody tr td:first-child {
+  font-weight: 600;
+  padding-right: 10px;
 }
 
-#start {
-    background-color: green;
+/* favourite movies css starts here */
+#list-container {
+  margin: 20px 10px;
 }
-
-#stop {
-    background-color: rgb(202, 202, 28);
+.list-item {
+  display: flex;
+  margin: 5px;
+  background-color: darkblue;
+  color: white;
 }
-
-#reset {
-    background-color: red;
+.list-item-thumbnail {
+  width: 15em;
+  padding: 10px;
+}
+.list-item-thumbnail img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  border: none;
+  object-fit: fill;
+}
+.list-item-info {
+  margin: 10px;
+}
+.list-item-info button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+#moviesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

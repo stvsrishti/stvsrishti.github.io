@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favourite Movies</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/47126d2123.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1>IMDb</h1>
+      <!-- Navigation Bar -->
+      <nav>
+        <a href="index.html"><h3>Home</h3></a>
+        <a href="favouriteMovies.html"><h3>My Favourite Movies</h3></a>
+      </nav>
+    </header>
+    <!-- List of Favourite Movies added dynamically from JS -->
+    <div id="list-container">
+      <div id="loader" class="center"></div>
+      <h1>My Favourites Movies</h1>
+      <div id="moviesList">
+
+      </div>
+
+    </div>
+    <script src="favouriteMovies.js"></script>
+  </body>
+</html>
